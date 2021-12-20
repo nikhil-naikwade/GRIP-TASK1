@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GRIP Basic Banking System</title>
+	<link rel="icon" href="/images/tsf.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="home_style.css">
+	<link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.php">
+    <!-- <link href="navbar.php">
+    <link href="header.php">
+    <link href="easter_egg.php"> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header_style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar_style.css">
+    <script src="jquery-3.2.1.min.js"></script>
+
+
+
+ 
+</head>
+
+<body>
+    <div class="flex-container-header">
+        <div class="flex-item-header">
+            <img src="images/logo1.png" onclick="eEgg_func()" width="100" height="100">
+        </div>
+        <div class="flex-item-header">
+            <h1>GRIP BASIC BANKING SYSTEM</h1>
+        </div>
+    </div>
+
+    <div class="nav-wrapper">
+        <div class="topnav" id="theTopNav">
+            <a href="./index.html">HOME</a>
+            
+             <a class="nav-link" href="https://www.thesparksfoundationsingapore.org/ " target="_blank">ABOUT US</a>
+             <a href="./create.php">CREATE A NEW USER</a>
+              <a href="./money.php">USERS</a>
+              <a href="./history.php">USER HISTORY</a>
+            <a href="javascript:void(0);" class="icon" onclick="respFunc()">&#9776;</a>
+        </div>
+        </div>
+
+        <script>
+            function respFunc() {
+                var x = document.getElementById("theTopNav");
+                console.log(x);
+            
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                    return 0;
+                }
+            
+                if (x.className === "topnav navbar-fixed") {
+                    x.className += " responsive";
+                    return 0;
+                }
+            
+                if (x.className === "topnav responsive") {
+                    x.className = "topnav";
+                    return 0;
+                }
+            
+                if (x.className === "topnav navbar-fixed responsive" || x.className === "topnav responsive navbar-fixed") {
+                    x.className = "topnav navbar-fixed";
+                    return 0;
+                }
+            }
+            
+            // Function below is jquery-3 function used for making the navbar sticky
+            $(document).ready(function() {
+              $(window).scroll(function () {
+                if ($(window).scrollTop() > 120) {
+                  $("#theTopNav").addClass('navbar-fixed');
+                }
+                if ($(window).scrollTop() < 121) {
+                  $("#theTopNav").removeClass('navbar-fixed');
+              }
+              });
+            });
+            </script>
+
+    <div class="flex-container-background">
+        <div class="flex-container">
+            <div class="flex-item-0">
+            <strong>  <h1 id="form_header"> Mini Bank Everywhere just Select And Transact.!!! </h1> </strong>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="flex-item-1">
+                
+                    <div class="flex-item-login">
+                        <h2 style="text-align:center;">Welcome</h2>
+                    </div>
+
+                    <div class="flex-item">
+                        <form method="get" action="money.php">
+                           <button type="submit" style="float:right;width:470px;">Money Transfer</button>
+                        </form>
+                    </div>
+                 
+                    <div class="flex-item">
+                        <form method="get" action="money.php">
+                         <a href="./money.php"></a>  <button type="submit" style="float:right;width:470px;">Veiw All Customers</button>
+                        </form>
+                    </div>
+                 
+                  
+
+                    <div class="flex-item">
+					    <form method="get" action="history.php">
+                           <button type="submit" style="float: right;width:475px;">Transaction History</button>
+						</form>
+                    </div>
+
+                    
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+	</br>
+	</br>
+	<div class="foot">
+        <footer class="bg-light text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);text-align:center;color:white;">
+                © 2021 Copyright - <strong>Made by Nikhil Shriram Naikwade.</strong>
+                <a class="text-dark" href="https://www.thesparksfoundationsingapore.org/" target="_blank" style="color:white;"> The Spark Foundation Intern Batch - December 2021 </a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+
+</body>
+</html>
